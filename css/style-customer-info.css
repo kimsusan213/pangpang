@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    font-family: "SUIT", sans-serif;
+}
+html {
+    color:#333333;
+    font-family:'Noto Sans KR', 'Noto Sans Korean', 'Roboto', sans-serif;
+    background-color:#ffffff;
+}
+a {
+    text-decoration: none;
+    color:#333333;
+}
+:root {
+    --main-color: #FF8039;
+}
+/* NAVIGATION BAR */
+.nav-bar-white {
+    background-color: #ffffff;
+    z-index:20;
+    position:sticky;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 71px;
+    padding: 0 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0px 2px 12px 0px rgb( 51 51 51 / 10%);
+}
+.logo {
+    padding: 10px 0 0;
+}
+.nav-contents-right {
+    list-style:none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+.nav-contents-right li {
+    font-size: 13px;
+    margin-left: 40px;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+/* CUSTOMER INFORMATION FORM */
+.customer-information {
+    width: 768px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+
+.customer-information > .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+.customer-information > .form-subtitle {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #999999;
+}
+.customer-information > .form-order-detail > .detail-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px 0px 8px 4px;
+}
+.customer-information > .form-order-detail .short-text-input {
+    margin: 0 10px 0 0;
+    width: 120px;
+    height: 38px;
+    padding: 0px 10px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+.customer-information > .form-order-detail .phone-number {
+    /* display: flex; */
+}
+.customer-information > .form-order-detail .phone-number > .select {
+    margin-right: 10px;
+    margin-top:0px;
+    position:inherit;
+    width: 78px;
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    padding: 0px 10px;
+    background-color: #ffffff;
+}
+.customer-information > .form-order-detail .phone-number > .select > option {
+    font-weight: normal;
+    white-space: nowrap;
+    min-height: 1.2em;
+    padding: 1px 2px 1px;
+}
+.customer-information > .form-order-detail .phone-number > .text-input {
+    margin-left: 0px;
+    margin-right: 10px;
+    width: 58px;
+    height: 38px;
+    padding: 0px 10px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+.customer-information > .form-order-detail > .form-text > .text-input {
+    width: 500px;
+    height: 39px;
+    margin: 0;
+    padding: 0px 10px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+.footer-order {
+    width: 420px;
+    height: 56px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-order .button-order {
+    height: 100%;
+    border-radius: 4px;
+    color: #ffffff;
+    background: rgb(255,128,57);
+    background: linear-gradient(90deg, rgba(255,128,57,1) 0%, rgba(161,212,186,1) 100%);    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

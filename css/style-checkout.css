@@ -1,0 +1,455 @@
+* {
+    /* box-sizing: border-box; */
+    margin:0;
+    font-family: "SUIT", sans-serif;
+}
+html {
+    color:#333333;
+    font-family:'Noto Sans KR', 'Noto Sans Korean', 'Roboto', sans-serif;
+    background-color:#ffffff;
+}
+a {
+    text-decoration: none;
+    color:#333333;
+}
+:root {
+    --main-color:#FF8039;
+}
+/* NAVIGATION BAR */
+.nav-bar-white {
+    background-color: #ffffff;
+    z-index:20;
+    position:sticky;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 71px;
+    padding: 0 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 0px 2px 12px 0px rgb( 51 51 51 / 10%);
+}
+.logo {
+    padding: 12px 0;
+}
+.nav-contents-right {
+    list-style:none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+.nav-contents-right li {
+    font-size: 13px;
+    margin-left: 40px;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+
+.payment-container {
+    margin: auto;
+    text-align: center;
+}
+
+.payment-container > .left {
+    vertical-align: top;
+    display: inline-block;
+    width: 558px;
+}
+
+.left > .reservation-info {
+    width: auto;
+    margin: auto;
+    margin-top: 40px;
+    padding: 0px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+    text-align:initial;
+}
+
+.left > .reservation-info > .reservation-title {
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #ffffff;
+    padding: 40px 40px 30px 40px;
+}
+.left > .reservation-info > .reservation-details {
+    padding: 12px 20px;
+}
+.left > .reservation-info > .reservation-details > .reservation-details-container {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-bottom: 12px;
+}
+.left .reservation-details .product-type {
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.left .reservation-details .product-type img {
+    width:20px;
+    height:20px;
+    float:none;
+    vertical-align:sub;
+}
+.left .reservation-details .product-type span {
+    margin-left: 8px;
+}
+
+.left .reservation-details .body {
+    margin-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px dotted #e5e5e5;
+}
+.left .reservation-details .body > .selected-product-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.left .reservation-details .body > .selected-product-option {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+}
+.left .reservation-details .body > .selected-date {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.left .reservation-details .selected-items {
+    margin-top: 23px;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+.left .reservation-details .selected-items > .item {
+    width: 100%;
+    margin-bottom: 16px;
+}
+.left .reservation-details .selected-items > .item > .item-left {
+    color: #999999;
+    width: 70%;
+    display:inline-block;
+    font-size: 14px;
+    text-align: initial;
+}
+.left .reservation-details .selected-items > .item > .item-right {
+    color: #333333;
+    font-size: 14px;
+    float: right;
+}
+
+.left .reservation-details .customer-info-button {
+    cursor:pointer;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    padding: 10px;
+}
+
+.left .reservation-total {
+    background-color: #ffffff;
+    border-radius: 0px 0px 8px 8px;
+    padding: 30px 20px 30px 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.left .reservation-total > .left-label {
+    width: 70%;
+    display:inline-block;
+}
+.left .reservation-total > .right-price {
+    float: right;
+    color: var(--main-color);
+}
+
+
+.payment-container > .right {
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 30px;
+    width: 582px;
+}
+
+.right > .payment-method-form {
+    text-align:initial;
+    width: auto;
+    margin: auto;
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+.right > .payment-method-form:last-child {
+    margin-bottom:80px;
+}
+
+.right > .payment-method-form > .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.right > .payment-method-form > .payment-method {
+    width: 502px;
+    height: 64px;
+    border-radius: 5.3px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.right > .payment-method-form > .payment-method > .method-title {
+    display: flex;
+}
+.right > .payment-method-form > .payment-method > .method-title > .icon {
+    width: 26px;
+    height: 21px;
+    margin: 24px 21px;
+}
+.right > .payment-method-form > .payment-method > .method-title > .name {
+    height: 100%;
+    padding-top: 20px;
+    color: #cccccc;
+}
+.right > .payment-method-form > .payment-method.phone .icon {
+    width: 23px;
+    height: 23px;
+    margin: 20px 21px;
+}
+
+.right > .payment-method-form > .payment-method.active {
+    border: 1px solid #333333;
+}
+.right > .payment-method-form > .payment-method.active > .method-title > .name {
+    color: #333333;
+}
+
+
+
+.right > .payment-method-form .agree-all {
+    margin: 0 0 20px;
+    padding:20px;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+.right .payment-method-form .agree-all > .radiobutton-container {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+}
+.agree-all > .radiobutton-container > .radiobutton {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+.agree-all > .radiobutton-container > .radiobutton img {
+    width: 100%;
+    height: 100%;
+}
+.agree-all > .radiobutton-container > .label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.right > .payment-method-form .agree {
+    margin: 20px 0px 0px 20px;
+    display: flex;   
+}
+.right > .payment-method-form .agree > .radiobutton-container {
+    font-size: 16px;
+    font-weight: 500;
+    width: calc(100% - 62px);
+    display:flex;
+    align-items: center;
+    cursor:pointer;
+}
+.agree > .radiobutton-container > .radiobutton {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+.agree > .radiobutton-container > .radiobutton img {
+    width: 100%;
+    height: 100%;
+}
+.agree > .view-agreement-text {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--main-color);
+    display: inline-block;
+    cursor:pointer;
+}
+
+
+.payment-detail > .subtitle {
+    display: inline-block;
+    width: 72px;
+    height: 20px;
+    font-size: 14px;
+    color: #999999;
+    margin-top: 10px;
+}
+.payment-detail > .subtitle-price {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: right;
+}
+.payment-method-form > .divider {
+    margin: 30px 0px;
+    height: 1px;
+    background-color: #f5f5f5;
+}
+.payment-method-form > .total-price > .title {
+    display:inline-block;
+    font-size: 20px;
+    font-weight: 500;
+}
+.payment-method-form > .total-price > .final-price {
+    display:inline;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.67;
+    text-align:right;
+    color: #333333;
+    float:right;
+}
+.payment-method-form .payment-button {
+    height: 56px;
+    border-radius:4px;
+    color: #ffffff;
+    background: rgb(255,128,57);
+    background: linear-gradient(90deg, rgba(255,128,57,1) 0%, rgba(161,212,186,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    cursor:pointer;
+}
+
+/**************************************/
+/* MODAL BOXES */
+/**************************************/
+#modal {
+    position:fixed;
+    z-index:100;
+}
+
+/* apply to all modals */
+.customer-detail-modal,
+.agreement-modal {
+    position:fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+}
+.customer-detail-modal > .customer-modal-container,
+.agreement-modal > .agreement-modal-container {
+    width: 640px;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+}
+#modal .modal-header {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#modal .modal-header > .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-right: 20px;
+}
+#modal .modal-header > .button-close {
+    width: 16px;
+    height: 16px;
+    padding-top: 2px;
+    cursor:pointer;
+}
+
+/* CUSTOMER DETAIL MODAL */
+#modal > .customer-detail-modal{
+    /* display: flex; */
+    display:none;
+}
+.customer-detail-modal > .customer-modal-container > .modal-content {
+    height: calc(530px - 40px);
+    overflow: auto;
+    margin-top:20px;
+}
+.customer-detail-modal .modal-content > .modal-title {
+    background-color: #f5f5f5;
+    padding: 18px 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.customer-detail-modal .modal-content > .modal-item {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 16px 20px;
+}
+.customer-detail-modal .modal-content > .modal-item > .item-left {
+    color: #999999;
+    width: 120px;
+    margin-right: 80px;
+    display:inline-block;
+}
+.customer-detail-modal .modal-content > .modal-item > .item-right {
+    display: inline-block;
+    word-break: break-all;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* TERMS AND AGREEMENTS MODAL */
+#modal > .agreement-modal.third-party {
+    /* display: flex; */
+    display:none;
+}
+#modal > .agreement-modal.purchase{
+    display:none;
+}
+
+.agreement-modal .modal-content {
+    /* white-space: break-spaces; */
+    margin: 30px 0px;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    max-height: 400px;
+    overflow: auto;
+}
+.agreement-modal .modal-content > .terms-third-party {
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.agreement-modal .modal-content > .terms-third-party > .policy {
+    color: #282f33;
+    border-bottom: 1px solid #f8f9fa;
+}
+.agreement-modal .modal-content > .terms-third-party > .policy > strong {
+    /* font-family: "SUIT", sans-serif; */
+    font-size: 14px;
+    font-weight: 600;
+}
+.agreement-modal .modal-content > .terms-third-party > .policy > p {
+    /* font-family: "SUIT", sans-serif; */
+    font-size: 14px;
+    line-height: 1.57;
+    margin: 20px 0;
+}

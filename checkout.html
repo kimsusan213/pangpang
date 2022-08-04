@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+
+    <link href="css/style-checkout.css" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-bar-white">
+        <a href="index.html">
+            <div class="logo">
+                <img src="img/pangpang_white.png">
+            </div>
+        </a>
+        <ul class="nav-contents-right">
+            <li>한국어</li>
+            <li>고객센터</li>
+        </ul>
+    </div>
+    <div class="payment-container">
+        <div class="left">
+            <div class="reservation-info">
+                <div class="reservation-title">예약 정보</div>
+                <div class="reservation-details">
+                    <div class="reservation-details-container">
+                        <div class="product-type">
+                            <img src="img/activity.png">
+                            <span>체험권</span>
+                        </div>
+                        <div class="body">
+                            <div class="selected-product-title">부산 송도해상케이블카 (바로사용 즉시입장)</div>
+                            <div class="selected-product-option">에어 크루즈 (22년 6월30일까지)</div>
+                            <div class="selected-date">2022-06-11</div>
+                        </div>
+                        <div class="selected-items">
+                            <div class="item">
+                                <div class="item-left">14세 이상</div>
+                                <div class="item-right">
+                                    X 
+                                    2
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-left">36개월-13세 이하</div>
+                                <div class="item-right">
+                                    X 
+                                    1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-info-button">예약자 상세 정보</div>
+                    </div>
+                </div>
+                <div class="reservation-total">
+                    <div class="left-label">총 금액</div>
+                    <div class="right-price">₩ 41,000</div>
+                </div>
+            </div>
+        </div> <!--End .left-->
+
+        <div class="right">
+            <div class="payment-method-form">
+                <div class="form-title">결제수단</div>
+                <div class="payment-method card">
+                    <div class="method-title">
+                        <img class="icon" src="img/icon_card_light.png">
+                        <!-- <img class="icon" src="img/icon_dark_card.png"> -->
+
+                        <!-- <img class="icon" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16100910685114.svg"> -->
+                        <!-- <img class="icon" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16105927256242.svg"> -->
+                        <div class="name">카드</div>
+                    </div>
+                </div>
+                <div class="payment-method account">
+                    <div class="method-title">
+                        <!-- <img class="icon" src="img/icon_light_account.png"> -->
+                        <img class="icon" src="img/icon_account_light.png">
+                        <!-- <img class="icon" src="img/icon_dark_accoung.png"> -->
+                        <div class="name">계좌이체</div>
+                    </div>
+                </div>
+                <!-- <div class="payment-method phone">
+                    <div class="method-title">
+                        <img class="icon" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16335958063772.svg">
+                        <div class="name">휴대폰</div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="payment-method-form">
+                <div class="form-title">약관 동의</div>
+                <div class="agree-all">
+                    <div class="radiobutton-container">
+                        <div class="radiobutton">
+                            <img src="img/unchecked.png">
+                            <!-- <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16378096050839.svg"> -->
+                        </div>
+                        <div class="label">전체 동의</div>
+                    </div>
+                </div>
+                <div class="agree">
+                    <div class="radiobutton-container">
+                        <div class="radiobutton">
+                            <img src="img/unchecked.png">
+                            <!-- <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16378096050839.svg"> -->
+                        </div>
+                        <div class="label">개인정보 제3자 제공 동의</div>
+                    </div>
+                    <div class="view-agreement-text" id="third-party">[전문보기]</div>
+                </div>
+                <div class="agree">
+                    <div class="radiobutton-container">
+                        <div class="radiobutton">
+                            <!-- <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16378096050839.svg"> -->
+                            <!-- <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16115634998841.svg"> -->
+                            <img src="img/unchecked.png">
+                        </div>
+                        <div class="label">구매 및 결제서비스 동의</div>
+                    </div>
+                    <div class="view-agreement-text" id="purchase">[전문보기]</div>
+                </div>
+            </div>
+
+            <div class="payment-method-form">
+                <div class="form-title">결제 정보</div>
+                <div class="payment-detail">
+                    <div class="subtitle">총 금액</div>
+                    <div class="subtitle-price">₩ 41,000</div>
+                </div>
+                <div class="payment-detail">
+                    <div class="subtitle">할인</div>
+                    <div class="subtitle-price">
+                        -
+                        ₩ 1,000</div>
+                </div>
+                <div class="divider"></div>
+                <div class="total-price">
+                    <div class="title">총 결제 금액</div>
+                    <div class="final-price">₩ 40,000</div>
+                </div>
+                <div class="divider"></div>
+                <a href="index.html"><div class="payment-button">결제하기</div></a>
+            </div>
+        </div> <!--End .right-->
+    </div> <!--End payment-container -->
+
+    <div id="modal">
+
+        <div class="customer-detail-modal">
+            <div class="customer-modal-container">
+                <div class="modal-header">
+                    <div class="title">부산 송도해상케이블카 (바로사용 즉시입장)</div>
+                    <div class="button-close">
+                        <img class="x-icon" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578840348653.svg">
+                    </div>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-title">예약자 정보</div>
+                    <div class="modal-item">
+                        <div class="item-left">휴대전화번호</div>
+                        <div class="item-right">010-1234-5678</div>
+                    </div>
+                    <div class="modal-item">
+                        <div class="item-left">이름</div>
+                        <div class="item-right">김수영</div>
+                    </div>
+                    <div class="modal-item">
+                        <div class="item-left">이메일</div>
+                        <div class="item-right">email@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="agreement-modal third-party">
+            <div class="agreement-modal-container">
+                <div class="modal-header">
+                    <div class="title">개인정보 제3자 제공 동의</div>
+                    <div class="button-close">
+                        <img class="x-icon" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578840348653.svg">
+                    </div>
+                </div>
+                <div class="modal-content">
+                    <div class="terms-third-party">
+                        <div class="policy">
+                            <strong>회원의 개인정보는 당사의 개인정보처리방침에 따라 안전하게 보호됩니다.</strong>
+                            <p>"WAUG Inc."은 이용자들의 개인정보를 "개인정보 처리방침의 개인정보의 수집 및 이용목적"에서 고지한 범위내에서 사용하며, 이용자의 사전 동의 없이는 동 범위를 초과하여 이용하거나 원칙적으로 이용자의 개인정보를 외부에 공개하지않습니다</p>
+                            <p>"WAUG Inc."이 제공하는 서비스를 통하여 주문 및 결제가 이루어진 경우 구매자 확인등 거래이행을 위해 관련된 정보를 필요한 범위내에서 거래 업체에게 제공합니다.</p>
+                            <p>2022년 5월 24일 ~ 7월 15일까지 진행되는 '철도 연계상품 구입 시 KTX 최대 50% 할인' 프로모션 상품 구매자의 개인정보를 한국 철도(KORAIL) 측에 제공합니다. </p>
+                        </div>
+                        <div class="summary">
+                            <h2></h2>
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!--End .modal-content -->
+            </div> <!--End .agreement-modal-container-->
+        </div><!--End .agreement-modal-->
+
+        <div class="agreement-modal purchase">
+            <div class="agreement-modal-container">
+                <div class="modal-header">
+                    <div class="button-close">
+                        <div class="title"></div>
+                        <img class="x-icon" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578840348653.svg">
+                    </div>
+                </div>
+                <div class="modal-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script-checkout.js"></script>
+</body>
+</html>
