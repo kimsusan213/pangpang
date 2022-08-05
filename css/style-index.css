@@ -470,17 +470,21 @@ a {
 .item-slider-wrapper,
 .swiper-wrapper {
     position: relative;
-    /* width: 100%; */
     height: 100%;
     display: flex;
     transition-duration: 300ms;
     left: 0;
-    touch-action: none;
 }
 
-.item-card,
-.swiper-slide {
+.item-card {
     margin-right: 15px;
+    flex-shrink: 0;
+    position: relative;
+    width: 261px;
+    height: 100%;
+    cursor: pointer;
+}
+.swiper-slide {
     flex-shrink: 0;
     position: relative;
     width: 261px;

@@ -799,10 +799,10 @@
             //     if (!swiper.params.debugger) return;
             //     console.log('sliderMove');
             // });
-            on('slideChange', ()=> {
-                if(!swiper.params.debugger) return;
-                console.log('slideChange');
-            });
+            // on('slideChange', ()=> {
+            //     if(!swiper.params.debugger) return;
+            //     console.log('slideChange');
+            // });
             // on('slideChangeTransitionStart', ()=> {
             //     if(!swiper.params.debugger) return;
             //     console.log('slideChangeTransitionStart');
@@ -821,7 +821,6 @@
             // });
             on('fromEdge', ()=> {
                 if(!swiper.params.debugger) return;
-                console.log('fromEdge');
                 if(window.getComputedStyle(document.querySelector('.swiper-button-prev')).visibility == 'hidden') {
                     document.querySelector('.swiper-button-prev').style.visibility = 'visible';
                 }
@@ -832,12 +831,10 @@
             on('reachBeginning', () => {
                 if (!swiper.params.debugger) return;
                 document.querySelector('.swiper-button-prev').style.visibility = 'hidden';
-                console.log('reachBeginning');
             });
             on('reachEnd', () => {
                 if (!swiper.params.debugger) return;
                 document.querySelector('.swiper-button-next').style.visibility = 'hidden';
-                console.log('reachEnd');
             })
         }
         var swiper = new Swiper('.mySwiper', {
