@@ -338,6 +338,11 @@ a {
     width: 100%;
     padding:0;
 }
+@media(max-width: 800px){
+    .banner {
+        margin-top: 40px;
+    }
+}
 .banner-wrapper {
     position:relative;
     cursor:pointer;

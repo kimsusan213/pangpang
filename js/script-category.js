@@ -37,7 +37,28 @@
 //         moveSlide(i, currentIndex[i] - 1, event.currentTarget);
 //     })
 // }
-
+// CHANGE NAVIGATION ON SCROLL
+var nav = document.querySelector('.nav-transparent-wrapper');
+window.onscroll = function() {
+    if(window.pageYOffset > window.innerHeight * .4) {
+        nav.classList.add('nav-white-wrapper');
+        nav.classList.remove('.nav-transparent-wrapper');
+        document.querySelector('.logo img').src="img/pangpang_white.png";
+        document.querySelector('.nav-bar-mobile .left .white').style.display = 'none';
+        document.querySelector('.nav-bar-mobile .left .black').style.display = 'block';
+        document.querySelector('.nav-bar-mobile .right .white').style.display = 'none';
+        document.querySelector('.nav-bar-mobile .right .black').style.display = 'block';
+    }
+    else {
+        nav.classList.add('nav-transparent-wrapper');
+        nav.classList.remove('nav-white-wrapper');
+        document.querySelector('.logo img').src="img/pangpang_transparent.png";
+        document.querySelector('.nav-bar-mobile .left .white').style.display = 'block';
+        document.querySelector('.nav-bar-mobile .left .black').style.display = 'none';
+        document.querySelector('.nav-bar-mobile .right .white').style.display = 'block';
+        document.querySelector('.nav-bar-mobile .right .black').style.display = 'none';
+    }
+}
 
 var sortOptionTitle = document.querySelector('.items-display-sort-text');
 var sortContainer = document.querySelector('.items-display-sort-option');
