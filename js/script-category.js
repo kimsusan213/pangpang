@@ -37,10 +37,12 @@
 //         moveSlide(i, currentIndex[i] - 1, event.currentTarget);
 //     })
 // }
+
+
 // CHANGE NAVIGATION ON SCROLL
 var nav = document.querySelector('.nav-transparent-wrapper');
 window.onscroll = function() {
-    if(window.pageYOffset > window.innerHeight * .4) {
+    if(window.pageYOffset > document.querySelector('.header-container').offsetHeight) {
         nav.classList.add('nav-white-wrapper');
         nav.classList.remove('.nav-transparent-wrapper');
         document.querySelector('.logo img').src="img/pangpang_white.png";
