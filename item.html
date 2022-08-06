@@ -789,6 +789,14 @@
                 swiper.el.querySelector('.swiper-button-next').style.visibility = 'hidden';
             })
         }
+        var imageSwiper = new Swiper('.imageSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        })
         var swiper1 = new Swiper('.mySwiper1', {
             modules: [myPlugin],
             slidesPerView: 'auto',
