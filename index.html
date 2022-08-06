@@ -208,53 +208,40 @@
         </div>
 
         <div class="banner">
-            <div class="banner-pagination">
-                <div class="banner-pagination-bullet bullet-active"></div>
-                <div class="banner-pagination-bullet"></div>
-                <div class="banner-pagination-bullet"></div>
-                <div class="banner-pagination-bullet"></div>
-            </div>
-            <div class="banner-container">
-                <div class="banner-wrapper">
-                    <!-- banner ratio must be 683 : 80 -->
-                        <!-- rendered size must be 1140 x 134 px -->
-                    <div class="banner-slide">
-                        <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/05/20/16530292704639.jpg">
+            <div class="swiper banner-container pcBanner">
+                <div class="swiper-wrapper banner-wrapper">
+                    <div class="swiper-slide banner-slide">
+                        <img class="pc" src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/08/04/16595722626427.jpg">
+                        <img class="mobile" src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/08/04/16595722627172.jpg">
                     </div>
-                    <div class="banner-slide">
-                        <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/05/17/16527816888048.jpg">
+                    <div class="swiper-slide banner-slide">
+                        <img class="pc" src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/06/02/16541513806308.png">
+                        <img class="mobile" src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/05/25/16534658794398.png">
                     </div>
-                    <div class="banner-slide">
-                        <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/05/20/16530292704639.jpg">
+                    <div class="swiper-slide banner-slide">
+                        <img class="pc" src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/07/01/16566456911232.png">
+                        <img class="mobile" src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/07/01/16566456912344.png">
                     </div>
-                    <div class="banner-slide">
-                        <img src="https://via.placeholder.com/1134x134.jpg">
+                    <div class="swiper-slide banner-slide">
+                        <img class="pc" src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/07/20/16583044422239.jpg">
+                        <img class="mobile" src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/07/20/16583044423100.jpg">
                     </div>
-                </div>
-                <div class="banner-button-prev"></div>
-                <div class="banner-button-next"></div>
-            </div>
-
-        <!-- mobile version intrinsic ratio size: 200:60 -->
-            <!-- <div class="banner-container-mobile">
-                <div class="banner-wrapper">
-                    
-                    <div class="banner-slide">
-                        <img src="https://via.placeholder.com/400x120.jpg">
+                    <div class="swiper-slide banner-slide">
+                        <img class="pc" src="https://dummyimage.com/1140x134/ff8239/ffffff">
+                        <img class="mobile" src="https://dummyimage.com/940x277/ffb8239/ffffff">
                     </div>
-                    <div class="banner-slide">
-                        <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/07/07/16571810331839.jpg">
-                    </div>
-                    <div class="banner-slide">
-                        <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/banner/2022/05/11/16522599898955.jpg">
-                    </div>
-                    <div class="banner-slide">
-                        <img src="https://via.placeholder.com/400x120.jpg">
+                    <div class="swiper-slide banner-slide">
+                        <!-- intrinsic size (in pixels)-->
+                        <img class="pc" src="https://dummyimage.com/1366x160/ffb082/ffffff">
+                        <img class="mobile" src="https://dummyimage.com/600x177/ffb082/ffffff">
+                        <!-- PC intrinsic ratio 683 : 80 -->
+                        <!-- MOBILE intrinsic ratio 200:60 -->
                     </div>
                 </div>
                 <div class="banner-button-prev"></div>
                 <div class="banner-button-next"></div>
-            </div> -->
+                <div class="banner-pagination"></div>
+            </div>
         </div>
 
         <!-- slider 1 -->
@@ -645,9 +632,9 @@
                 <div class="theme-card-title">이런 여행은 어때요?</div>
                 <div class="theme-card-subtitle">추천하는 여행을 만나보세요</div>
             </div>
-            <div class="theme-card-container">
-                <div class="theme-card-wrapper">
-                    <div class="card-container">
+            <div class="swiper theme-card-container">
+                <div class="swiper-wrapper theme-card-wrapper">
+                    <div class="swiper-slide card-container">
                         <div class="card-image" style="background-image: url(https://d2mgzmtdeipcjp.cloudfront.net/files/theme/2022/03/20/16477732650087.png?s=600x393)"></div>
                         <!-- https://via.placeholder.com/600x393.jpg -->
                         <div class="card-content">
@@ -656,7 +643,7 @@
                             <div class="card-subcontent">완벽한 제주 여행 필수품</div>
                         </div>
                     </div>
-                    <div class="card-container">
+                    <div class="swiper-slide card-container">
                         <div class="card-image" style="background-image: url(https://d2mgzmtdeipcjp.cloudfront.net/files/theme/2022/05/26/16535283565266.png?s=600x393);"></div>
                         <div class="card-content">
                             <div class="card-category">워터파크&서핑</div>
@@ -664,7 +651,7 @@
                             <div class="card-subcontent">최저가 구매 찬스, 놓치기마세요</div>
                         </div>
                     </div>
-                    <div class="card-container">
+                    <div class="swiper-slide card-container">
                         <div class="card-image" style="background-image: url(https://d2mgzmtdeipcjp.cloudfront.net/files/theme/2022/03/20/16477738000252.png?s=600x393);"></div>
                         <div class="card-content">
                             <div class="card-category">MD Recommendation</div>
@@ -794,31 +781,6 @@
             extendParams({
                 debugger: false,
             });
-
-            // on('sliderMove', () => {
-            //     if (!swiper.params.debugger) return;
-            //     console.log('sliderMove');
-            // });
-            // on('slideChange', ()=> {
-            //     if(!swiper.params.debugger) return;
-            //     console.log('slideChange');
-            // });
-            // on('slideChangeTransitionStart', ()=> {
-            //     if(!swiper.params.debugger) return;
-            //     console.log('slideChangeTransitionStart');
-            // })
-            // on('slideChangeTransitionEnd', ()=> {
-            //     if(!swiper.params.debugger) return;
-            //     console.log('slideChangeTransitionEnd');
-            // })
-            // on('transitionStart', ()=> {
-            //     if(!swiper.params.debugger) return;
-            //     console.log('transitionStart');
-            // });
-            // on('transitionEnd', ()=> {
-            //     if(!swiper.params.debugger) return;
-            //     console.log('transitionEnd');
-            // });
             on('fromEdge', ()=> {
                 if(!swiper.params.debugger) return;
                 let nextButton = swiper.el.querySelector('.swiper-button-next');
@@ -870,6 +832,23 @@
             },
             debugger: true,
         })
+        var banner = new Swiper('.pcBanner', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.banner-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.banner-button-next',
+                prevEl: '.banner-button-prev',
+            },
+        });
+        var cards = new Swiper('.theme-card-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+        });
     </script>
 
 </body>

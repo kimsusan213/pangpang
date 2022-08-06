@@ -64,49 +64,48 @@ for (i = 0; i < option_dropdown.length; i++) {
 }
 
 // BOTTOM SLIDERS
-var sliderContainers = document.querySelectorAll('.slider-container');
-var prevBtn = document.querySelectorAll('.button-prev');
-var nextBtn = document.querySelectorAll('.button-next');
-var slideWidth = parseInt(window.getComputedStyle(document.querySelector('.slide')).width);
-var slideMargin = parseInt(window.getComputedStyle(document.querySelector('.slide')).marginRight);
-var offset = slideWidth + slideMargin;
-var currentIndex = [];
-for(i=0; i < sliderContainers.length; i++){
-    currentIndex[i] = 0;
-}   
+// var sliderContainers = document.querySelectorAll('.slider-container');
+// var prevBtn = document.querySelectorAll('.button-prev');
+// var nextBtn = document.querySelectorAll('.button-next');
+// var slideWidth = parseInt(window.getComputedStyle(document.querySelector('.slide')).width);
+// var slideMargin = parseInt(window.getComputedStyle(document.querySelector('.slide')).marginRight);
+// var offset = slideWidth + slideMargin;
+// var currentIndex = [];
+// for(i=0; i < sliderContainers.length; i++){
+//     currentIndex[i] = 0;
+// }   
 
-function moveSlide(num, index, button) {
-    let slides = button.parentNode.querySelector('.slider-content');
-    let slide = button.parentNode.querySelectorAll('.slide');
-    let slideCount = slide.length;
-    let totalWidth = offset * slideCount;
-    slides.style.width = totalWidth + 'px';
-    slides.style.left = -index * offset + 'px';
-    currentIndex[num] = index;
+// function moveSlide(num, index, button) {
+//     let slides = button.parentNode.querySelector('.slider-content');
+//     let slide = button.parentNode.querySelectorAll('.slide');
+//     let slideCount = slide.length;
+//     let totalWidth = offset * slideCount;
+//     slides.style.width = totalWidth + 'px';
+//     slides.style.left = -index * offset + 'px';
+//     currentIndex[num] = index;
 
-    if(currentIndex[num] == slideCount - 4){
-        button.parentNode.querySelector('.button-next').style.visibility = "hidden";
-    } else {
-        button.parentNode.querySelector('.button-next').style.visibility = "visible";
-    }
-    if(currentIndex[num] == 0){
-        button.parentNode.querySelector('.button-prev').style.visibility = "hidden";
-    } else {
-        button.parentNode.querySelector('.button-prev').style.visibility = "visible";
-    }
-}
-for(let i=0; i < sliderContainers.length; i++) {
-    nextBtn[i].addEventListener("click", ()=> {
-        moveSlide(i, currentIndex[i] + 1, event.currentTarget);
-    })
-    prevBtn[i].addEventListener("click", ()=> {
-        moveSlide(i, currentIndex[i] - 1, event.currentTarget);
-    })
-}
+//     if(currentIndex[num] == slideCount - 4){
+//         button.parentNode.querySelector('.button-next').style.visibility = "hidden";
+//     } else {
+//         button.parentNode.querySelector('.button-next').style.visibility = "visible";
+//     }
+//     if(currentIndex[num] == 0){
+//         button.parentNode.querySelector('.button-prev').style.visibility = "hidden";
+//     } else {
+//         button.parentNode.querySelector('.button-prev').style.visibility = "visible";
+//     }
+// }
+// for(let i=0; i < sliderContainers.length; i++) {
+//     nextBtn[i].addEventListener("click", ()=> {
+//         moveSlide(i, currentIndex[i] + 1, event.currentTarget);
+//     })
+//     prevBtn[i].addEventListener("click", ()=> {
+//         moveSlide(i, currentIndex[i] - 1, event.currentTarget);
+//     })
+// }
 
 
 // IMAGE GALLERY
-
 var imageThumbs = document.querySelectorAll('.item-detail-images img');
 var imageGalleryModal = document.querySelector('.image-fullscreen');
 var fullscreenImages = document.querySelectorAll('.image-fullscreen img');
