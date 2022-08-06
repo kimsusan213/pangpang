@@ -30,52 +30,49 @@ sortOptions.forEach(option =>
 )
 
 
+// SLIDERS
+// var sliderContainers = document.querySelectorAll('.item-slider-container');
+// var prevBtn = document.querySelectorAll('.slider-button-prev');
+// var nextBtn = document.querySelectorAll('.slider-button-next');
+// var slideWidth = parseInt(window.getComputedStyle(document.querySelector('.item-card')).width);
+// var slideMargin = parseInt(window.getComputedStyle(document.querySelector('.item-card')).marginRight);
+// var offset = slideWidth + slideMargin;
+// var currentIndex = [];
+// for(i=0; i < sliderContainers.length; i++) {
+//     currentIndex[i] = 0;
+// }
+// function moveSlide(num, index, button) {
+//     let slides = button.parentNode.querySelector('.item-slider-wrapper');
+//     let slide = button.parentNode.querySelectorAll('.item-card');
+//     let slideCount = slide.length;
+//     let totalWidth = offset * slideCount;
+//     slides.style.width = totalWidth + 'px';
+//     slides.style.left = -index * offset + 'px';
+//     currentIndex[num] = index;
 
-var sliderContainers = document.querySelectorAll('.item-slider-container');
-var prevBtn = document.querySelectorAll('.slider-button-prev');
-var nextBtn = document.querySelectorAll('.slider-button-next');
-var slideWidth = parseInt(window.getComputedStyle(document.querySelector('.item-card')).width);
-var slideMargin = parseInt(window.getComputedStyle(document.querySelector('.item-card')).marginRight);
-var offset = slideWidth + slideMargin;
-var currentIndex = [];
-for(i=0; i < sliderContainers.length; i++) {
-    currentIndex[i] = 0;
-}
+//     if(currentIndex[num] == slideCount - 5) {
+//         button.parentNode.querySelector('.slider-button-next').style.visibility = "hidden";
+//     } else {
+//         button.parentNode.querySelector('.slider-button-next').style.visibility = "visible";
+//     }
+//     if(currentIndex[num] == 0) {
+//         button.parentNode.querySelector('.slider-button-prev').style.visibility = "hidden";
+//     } else {
+//         button.parentNode.querySelector('.slider-button-prev').style.visibility = "visible";
+//     }
+// }
 
-function loadSlide() {
-    // if the number of slides is only 5, hide both arrows
-}
+// for(let i = 0; i < sliderContainers.length; i++) {
+//     nextBtn[i].addEventListener('click', ()=> {
+//         moveSlide(i, currentIndex[i] + 1, event.currentTarget);
+//     })
+//     prevBtn[i].addEventListener('click', ()=> {
+//         moveSlide(i, currentIndex[i] - 1, event.currentTarget);
+//     })
+// }
 
-function moveSlide(num, index, button) {
-    let slides = button.parentNode.querySelector('.item-slider-wrapper');
-    let slide = button.parentNode.querySelectorAll('.item-card');
-    let slideCount = slide.length;
-    let totalWidth = offset * slideCount;
-    slides.style.width = totalWidth + 'px';
-    slides.style.left = -index * offset + 'px';
-    currentIndex[num] = index;
 
-    if(currentIndex[num] == slideCount - 5) {
-        button.parentNode.querySelector('.slider-button-next').style.visibility = "hidden";
-    } else {
-        button.parentNode.querySelector('.slider-button-next').style.visibility = "visible";
-    }
-    if(currentIndex[num] == 0) {
-        button.parentNode.querySelector('.slider-button-prev').style.visibility = "hidden";
-    } else {
-        button.parentNode.querySelector('.slider-button-prev').style.visibility = "visible";
-    }
-}
-
-for(let i = 0; i < sliderContainers.length; i++) {
-    nextBtn[i].addEventListener('click', ()=> {
-        moveSlide(i, currentIndex[i] + 1, event.currentTarget);
-    })
-    prevBtn[i].addEventListener('click', ()=> {
-        moveSlide(i, currentIndex[i] - 1, event.currentTarget);
-    })
-}
-
+// BESTSELLER SLIDE
 var bestsellerPaginationBtn = document.querySelectorAll('.bestseller-slider-pagination .slide');
 var bestsellerSlides = document.querySelector('.slide-wrapper');
 var index;

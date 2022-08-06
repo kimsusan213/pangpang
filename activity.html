@@ -57,9 +57,9 @@
             <div class="item-slider-header">
                 <div class="item-slider-title">제목</div>
             </div>
-            <div class="item-slider-container">
-                <div class="item-slider-wrapper">
-                    <div class="item-card">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image" style="background-image: url(https://via.placeholder.com/640x240.jpg)"></div>
                         </div>
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image" style="background-image: url(https://via.placeholder.com/640x240.jpg)"></div>
                         </div>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image" style="background-image: url(https://via.placeholder.com/640x240.jpg)"></div>
                         </div>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image" style="background-image: url(https://via.placeholder.com/640x240.jpg)"></div>
                         </div>
@@ -123,7 +123,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image" style="background-image: url(https://via.placeholder.com/640X240.jpg)"></div>
                         </div>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image" style="background-image: url(https://via.placeholder.com/640X240.jpg)"></div>
                         </div>
@@ -156,8 +156,8 @@
                         </div>
                     </div>
                 </div> <!--End item slider wrapper-->
-                <div class="item-button-prev"></div>
-                <div class="item-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div> <!--End item slider container-->
         </div> <!-- End Special items slider-->
 
@@ -391,6 +391,43 @@
     </div> <!--End page content-->
 
     <script src="js/script-category.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        function myPlugin( {swiper, extendParams, on}) {
+            extendParams({
+                debugger: false,
+            });
+            on('fromEdge', ()=> {
+                if(!swiper.params.debugger) return;
+                let nextButton = swiper.el.querySelector('.swiper-button-next');
+                let prevButton = swiper.el.querySelector('.swiper-button-prev');
+                if(window.getComputedStyle(nextButton).visibility == 'hidden') {
+                    nextButton.style.visibility = 'visible';
+                }
+                if(window.getComputedStyle(prevButton).visibility == 'hidden') {
+                    prevButton.style.visibility = 'visible';
+                }
+            })
+            on('reachBeginning', () => {
+                if (!swiper.params.debugger) return;
+                swiper.el.querySelector('.swiper-button-prev').style.visibility = 'hidden';
+            });
+            on('reachEnd', () => {
+                if (!swiper.params.debugger) return;
+                swiper.el.querySelector('.swiper-button-next').style.visibility = 'hidden';
+            })
+        }
+        var swiper = new Swiper('.mySwiper', {
+            modules: [myPlugin],
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            debugger: true,
+        });
+    </script>
 </body>
 </html>
 

@@ -61,9 +61,9 @@
             <div class="item-slider-header">
                 <div class="item-slider-title">분위기 있는, 호텔 레스토랑</div>
             </div>
-            <div class="item-slider-container">
-                <div class="item-slider-wrapper">
-                    <div class="item-card">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image"
                                 style="background-image: url(https://d2mgzmtdeipcjp.cloudfront.net/files/good/2021/12/29/16407692286443.jpg?s=640x420&t=outside&f=jpg)">
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image"
                                 style="background-image: url(https://d2mgzmtdeipcjp.cloudfront.net/files/good/2022/03/20/16477757796904.jpg?s=640x420&t=outside&f=jpg )">
@@ -99,7 +99,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image"
                                 style="background-image: url(https://d2mgzmtdeipcjp.cloudfront.net/files/good/2022/03/24/16480911683190.png?s=640x420&t=outside&f=jpg)">
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image"
                                 style="background-image: url(https://d2mgzmtdeipcjp.cloudfront.net/files/good/2020/06/25/15930727024565.jpg?s=640x420&t=outside&f=jpg)">
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image"
                                 style="background-image: url(https://d2mgzmtdeipcjp.cloudfront.net/files/good/2021/12/30/16408349320634.jpg?s=640x420&t=outside&f=jpg)">
@@ -153,7 +153,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image"
                                 style="background-image: url(https://via.placeholder.com/640x420.jpg)"></div>
@@ -170,7 +170,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item-card">
+                    <div class="swiper-slide">
                         <div class="item-card-image-wrapper">
                             <div class="item-card-image"
                                 style="background-image: url(https://via.placeholder.com/640x420.jpg)"></div>
@@ -189,8 +189,8 @@
                     </div>
                 </div>
                 <!--End item slider wrapper-->
-                <div class="item-button-prev"></div>
-                <div class="item-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
             <!--End item slider container-->
         </div> <!-- End Special items slider-->
@@ -513,6 +513,43 @@
     </div>
 
     <script src="js/script-category.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        function myPlugin( {swiper, extendParams, on}) {
+            extendParams({
+                debugger: false,
+            });
+            on('fromEdge', ()=> {
+                if(!swiper.params.debugger) return;
+                let nextButton = swiper.el.querySelector('.swiper-button-next');
+                let prevButton = swiper.el.querySelector('.swiper-button-prev');
+                if(window.getComputedStyle(nextButton).visibility == 'hidden') {
+                    nextButton.style.visibility = 'visible';
+                }
+                if(window.getComputedStyle(prevButton).visibility == 'hidden') {
+                    prevButton.style.visibility = 'visible';
+                }
+            })
+            on('reachBeginning', () => {
+                if (!swiper.params.debugger) return;
+                swiper.el.querySelector('.swiper-button-prev').style.visibility = 'hidden';
+            });
+            on('reachEnd', () => {
+                if (!swiper.params.debugger) return;
+                swiper.el.querySelector('.swiper-button-next').style.visibility = 'hidden';
+            })
+        }
+        var swiper = new Swiper('.mySwiper', {
+            modules: [myPlugin],
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            debugger: true,
+        });
+    </script>
 </body>
 
 </html>
