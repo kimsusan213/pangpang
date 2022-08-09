@@ -48,15 +48,24 @@ a {
 }
 
 /* CUSTOMER INFORMATION FORM */
-.customer-information {
-    width: 768px;
-    margin: auto;
-    margin-top: 40px;
-    padding: 40px;
-    border-radius: 8px;
-    border: 1px solid #e5e5e5;
+.mobile-device-before {
+    width: auto;
+    height: 10px;
+    background-color: #f5f5f5;
 }
-
+.mobile-device-after {
+    width: auto;
+    height: 20px;
+    background-color: #f5f5f5;
+}
+.customer-information {
+    width: auto;
+    margin: auto;
+    padding: 20px;
+    border-radius: 0px;
+    border: none;
+    margin-top: 0px;
+}
 .customer-information > .form-title {
     font-size: 24px;
     font-weight: bold;
@@ -75,23 +84,99 @@ a {
     letter-spacing: normal;
     color: #999999;
 }
-.customer-information > .form-order-detail > .detail-title {
+.customer-information .info-detail .detail-title {
     font-size: 14px;
     font-weight: 500;
     margin: 20px 0px 8px 4px;
 }
-.customer-information > .form-order-detail .short-text-input {
-    margin: 0 10px 0 0;
-    width: 120px;
+.customer-information .info-detail .form-text {
+    display: flex;
+}
+.customer-information .info-detail .form-text .short-text-input {
+    flex: 1;
+    width: calc(100% - 20px);
     height: 38px;
     padding: 0px 10px;
     border-radius: 4px;
     border: 1px solid #e5e5e5;
 }
-.customer-information > .form-order-detail .phone-number {
-    /* display: flex; */
+.customer-information .info-detail .form-text .short-text-input:first-child {
+    margin-right: 10px;
 }
-.customer-information > .form-order-detail .phone-number > .select {
+.customer-information .info-detail .phone-number{
+    display:flex;
+    margin-top: 10px;
+}
+.customer-information .info-detail .phone-number .select {
+    flex: 1;
+    margin-top: 0px;
+    margin-left: 0;
+    margin-right: 0px;
+    position: inherit;
+    width: 70px;
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    padding: 0px 10px;
+    background-color: #ffffff;
+}
+.customer-information .info-detail .phone-number > .text-input {
+    flex:1;
+    width: 58px;
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    padding: 0px 10px;
+    margin-left: 10px;
+}
+.customer-information .info-detail .form-text .text-input {
+    width: 100%;
+    height: 38px;
+    margin: 0;;
+    padding: 0px 10px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+@media (min-width:1171px){
+    .mobile-device-before,
+    .mobile-device-after {
+        display:none;
+    }
+    .customer-information {
+        width: 768px;
+        margin-top: 40px;
+        padding: 40px;
+        border-radius: 8px;
+        border: 1px solid #e5e5e5;
+    }
+    .customer-information .info-detail .form-text {
+        display: block;
+    }
+    .customer-information .info-detail .form-text .short-text-input {
+        flex:none;
+        margin: 0 10px 0 0;
+        width: 120px;
+    }
+    .customer-information .info-detail .phone-number {
+        display: block;
+        margin-top: 0px;
+    }
+    .customer-information .info-detail .phone-number .select {
+        flex: none;
+        margin-right: 10px;
+        margin-top: 0px;
+    }
+    .customer-information .info-detail .phone-number > .text-input {
+        flex: none;
+        margin-right: 10px;
+        margin-left: 0px;
+    }
+    .customer-information .info-detail .form-text .text-input {
+        width: 500px;
+    }
+}
+
+/* .customer-information .info-detail .phone-number > .select {
     margin-right: 10px;
     margin-top:0px;
     position:inherit;
@@ -102,13 +187,13 @@ a {
     padding: 0px 10px;
     background-color: #ffffff;
 }
-.customer-information > .form-order-detail .phone-number > .select > option {
+.customer-information .info-detail .phone-number > .select > option {
     font-weight: normal;
     white-space: nowrap;
     min-height: 1.2em;
     padding: 1px 2px 1px;
 }
-.customer-information > .form-order-detail .phone-number > .text-input {
+.customer-information .info-detail .phone-number > .text-input {
     margin-left: 0px;
     margin-right: 10px;
     width: 58px;
@@ -117,14 +202,14 @@ a {
     border-radius: 4px;
     border: 1px solid #e5e5e5;
 }
-.customer-information > .form-order-detail > .form-text > .text-input {
+.customer-information .info-detail > .form-text > .text-input {
     width: 500px;
     height: 39px;
     margin: 0;
     padding: 0px 10px;
     border-radius: 4px;
     border: 1px solid #e5e5e5;
-}
+} */
 
 .footer-order {
     width: 420px;

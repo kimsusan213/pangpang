@@ -182,3 +182,13 @@ navShortcutLink.forEach(anchor => {
         });
     });
 })
+
+var openMobileGallery = document.querySelector('.more-images-button');
+var closeMobileGallery = document.querySelector('.gallery-close-button');
+var mobileGalleryModal = document.querySelector('.mobile-gallery-modal');
+openMobileGallery.addEventListener('click', ()=> {
+    mobileGalleryModal.style.display = 'flex';
+});
+closeMobileGallery.addEventListener('click', ()=>{
+    mobileGalleryModal.style.display = 'none';
+})

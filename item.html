@@ -723,16 +723,17 @@
     
     </div> <!--End .item-detail-->
 
-    <!-- IMAGE GALLERY MODAL-->
+    <!-- PC IMAGE GALLERY MODAL-->
     <div class="image-fullscreen">
         <img id="1" src="https://d2mgzmtdeipcjp.cloudfront.net/files/good/2021/12/31/16409450782859.jpg?s=1024x587">
         <img id="2" src="https://d2mgzmtdeipcjp.cloudfront.net/files/good/2020/05/02/15884033461841.jpg?s=450x295">
         <img id="3" src="https://d2mgzmtdeipcjp.cloudfront.net/files/good/2019/07/11/15628132608356.png?s=450x295">
         <img id="4" src="https://d2mgzmtdeipcjp.cloudfront.net/files/good/2019/07/11/15628132610971.png?s=450x295">
         <img id="5" src="https://d2mgzmtdeipcjp.cloudfront.net/files/good/2020/02/20/15821899833585.png?s=450x295">
-        <img src="https://via.placeholder.com/1024x587">
-        <img src="https://via.placeholder.com/450x295">
-        <img src="https://via.placeholder.com/1100x600">
+        <img src="https://dummyimage.com/1024x587/d1d1d1/fff">
+        <img src="https://dummyimage.com/450x295/d1d1d1/fff">
+        <img src="https://dummyimage.com/1100x600/d1d1d1/fff">
+        <img src="https://dummyimage.com/400x600/d1d1d1/fff">
     </div>
 
     <div class="image-controls">
@@ -759,6 +760,43 @@
                     <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
                 </svg>
             </span>
+        </div>
+    </div>
+
+    <!-- MOBILE IMAGE GALLERY MODAL -->
+    <div class="mobile-gallery-modal">
+        <div class="gallery-header">
+            <img class="gallery-close-button" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15640219620508.svg">
+        </div>
+        <div class="gallery-content">
+            <div class="swiper mobileGallerySwiper">
+                <div class="mobile-gallery-next"></div>
+                <div class="mobile-gallery-prev"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2021/12/31/16409450782859.jpg?s=1024x587')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2020/05/02/15884033461841.jpg?s=450x295')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2019/07/11/15628132608356.png?s=450x295')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2019/07/11/15628132610971.png?s=450x295')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2020/02/20/15821899833585.png?s=450x295')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://dummyimage.com/1024x587/d1d1d1/fff')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://dummyimage.com/450x295/d1d1d1/fff')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://dummyimage.com/1100x600/d1d1d1/fff')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://dummyimage.com/400x600/d1d1d1/fff')"></div>
+                </div>
+            </div>
+            <div thumbSlider="" class="swiper thumbSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2021/12/31/16409450782859.jpg?s=1024x587')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2020/05/02/15884033461841.jpg?s=450x295')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2019/07/11/15628132608356.png?s=450x295')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2019/07/11/15628132610971.png?s=450x295')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://d2mgzmtdeipcjp.cloudfront.net/files/good/2020/02/20/15821899833585.png?s=450x295')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://dummyimage.com/1024x587/d1d1d1/fff')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://dummyimage.com/450x295/d1d1d1/fff')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://dummyimage.com/1100x600/d1d1d1/fff')"></div>
+                    <div class="swiper-slide" style="background-image: url('https://dummyimage.com/400x600/d1d1d1/fff')"></div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -818,6 +856,24 @@
             },
             debugger: true,
         });
+
+        var thumbSwiper = new Swiper('.thumbSwiper', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var gallerySwiper = new Swiper('.mobileGallerySwiper', {
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.mobile-gallery-next',
+                prevEl: '.mobile-gallery-prev',
+            },
+            thumbs: {
+                swiper: thumbSwiper,
+            },
+        });
+        
     </script>
 </body>
 </html>

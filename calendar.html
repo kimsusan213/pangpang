@@ -11,64 +11,86 @@
 </head>
 
 <body>
-    <div class="nav-bar-white">
-        <a href="index.html">
-            <div class="logo">
-                <img src="img/pangpang_white.png">
+    <div class="nav-white-wrapper">
+        <div class="nav-bar-pc">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/pangpang_white.png">
+                    <!-- <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16366122050748.svg"> -->
+    
+                </div>
+            </a>
+            <ul class="nav-contents-right">
+                <li>한국어</li>
+                <li>고객센터</li>
+            </ul>
+        </div>
+        <div class="nav-bar-mobile">
+            <div class="left">
+                <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15444220173835.svg">
             </div>
-        </a>
-        <ul class="nav-contents-right">
-            <li>한국어</li>
-            <li>고객센터</li>
-        </ul>
+            <div class="center">
+                <a href="index.html">
+                    <div class="center-logo"><img src="img/pangpang_white.png"></div>
+                </a>
+            </div>
+            <div class="right">
+                <div class="nav-bar-item">
+                    <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578840652736.svg">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="page-content">
-        <div class="title">부산 송도해상케이블카 왕복권 (바로사용 즉시입장)</div>
-        <div class="contents">
 
+    <div class="page-content">
+        <div class="product-title">부산 송도해상케이블카 왕복권 (바로사용 즉시입장)</div>
+        <div class="contents">
             <!-- CALENDAR -->
             <div class="calendar">
-                <div class="week-header">
-                    <div class="week-header-wrapper">
-                        <ul>
-                            <li>일</li>
-                            <li>월</li>
-                            <li>화</li>
-                            <li>수</li>
-                            <li>목</li>
-                            <li>금</li>
-                            <li>토</li>
-                        </ul>
+                <div class="calendar-wrapper">
+                    <div class="week-header">
+                        <div class="week-header-wrapper">
+                            <ul>
+                                <li>일</li>
+                                <li>월</li>
+                                <li>화</li>
+                                <li>수</li>
+                                <li>목</li>
+                                <li>금</li>
+                                <li>토</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="day-picker">
-                    <div class="navigation-button">
-                        <img class="button-prev disabled" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578832321432.svg">
-                        <img class="button-next" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578832425605.svg">
-                    </div>
-                    <div class="month-grid">
-                        <div class="month-grid-wrapper">
-                            <div class="month current">
-                                <div class="month-wrapper">
-                                    <div class="month-caption" id="year-month">----년 --월</div>
-                                    <table class="month-table">
-                                        <tbody class="days">
-                                        </tbody>
-                                    </table>
+                    <div class="day-picker">
+                        <div class="navigation-button">
+                            <img class="button-prev disabled" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578832321432.svg">
+                            <img class="button-next" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578832425605.svg">
+                        </div>
+                        <div class="month-grid">
+                            <div class="month-grid-wrapper">
+                                <div class="month current">
+                                    <div class="month-wrapper">
+                                        <div class="month-caption" id="year-month">----년 --월</div>
+                                        <table class="month-table">
+                                            <tbody class="days">
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="month next">
-                                <div class="month-wrapper">
-                                    <div class="month-caption" id="year-month">----년 --월</div>
-                                    <table class="month-table">
-                                        <tbody class="days">
-                                        </tbody>
-                                    </table>
+                                <div class="month next">
+                                    <div class="month-wrapper">
+                                        <div class="month-caption" id="year-month">----년 --월</div>
+                                        <table class="month-table">
+                                            <tbody class="days">
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            
             </div> <!--End .calendar-->
 
             <!-- SELECT OPTION -->
@@ -93,59 +115,109 @@
             </div>
         </div><!--End .contents-->
 
-        <div class="footer">
-            <div class="up">
-                <div class="left">
-                    <div class="column-4-menu">
-                        <div class="menu-title">고객센터</div>
-                        <div class="menu-item">FAQ</div>
-                        <div class="menu-item">이용약관</div>
-                        <div class="menu-item">게인정보 처리방침</div>
+        <div class="footer-wrapper">
+            <div class="footer-pc">
+                <div class="up">
+                    <div class="left">
+                        <div class="column-4-menu">
+                            <div class="menu-title">고객센터</div>
+                            <div class="menu-item">FAQ</div>
+                            <div class="menu-item">이용약관</div>
+                            <div class="menu-item">게인정보 처리방침</div>
+                        </div>
+                        <div class="column-4-menu">
+                            <div class="menu-title">회사소개</div>
+                            <div class="menu-item">About Us</div>
+                        </div>
+                        <div class="column-4-menu">
+                            <div class="menu-title">Partnership</div>
+                            <div class="menu-item">Contact Us</div>
+                        </div>
+                        <div class="column-4-menu">
+                            <div class="menu-title">결제수단</div>
+                            <div class="menu-payment-method">
+                                <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452006422222.svg">
+                                <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452006708461.svg">
+                                <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452006841604.svg">
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="column-4-menu">
-                        <div class="menu-title">회사소개</div>
-                        <div class="menu-item">About Us</div>
-                    </div>
-                    <div class="column-4-menu">
-                        <div class="menu-title">Partnership</div>
-                        <div class="menu-item">Contact Us</div>
-                    </div>
-                    <div class="column-4-menu">
-                        <div class="menu-title">결제수단</div>
-                        <div class="menu-payment-method">
-                            <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452006422222.svg">
-                            <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452006708461.svg">
-                            <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452006841604.svg">
+                    <div class="right">
+                        Follow Us
+                        <div class="sns-container">
+                            <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145570607.svg"></a>
+                            <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145719190.svg"></a>
+                            <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145832518.svg"></a>
+                            <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145975218.svg"></a>
                         </div>
                     </div>
-    
                 </div>
-                <div class="right">
-                    Follow Us
-                    <div class="sns-container">
-                        <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145570607.svg"></a>
-                        <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145719190.svg"></a>
-                        <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145832518.svg"></a>
-                        <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145975218.svg"></a>
+                <div class="down">
+                    <div class="left">
+                        <div>Geoje, Gyeonsangnamdo, Republic of Korea</div>
+                        <div class="margin-top-5px">Customer Support Center: +82 ) 070-4353-5959 (10:00 AM - 06:00 PM) Exclding weenends & public holidays</div>
+                        <div class="margin-top-5px">help@waug.com</div>
+                        <div class="margin-top-5px"> WAUG Inc. is a sales broker. We are not responsible for any product information and transactions.</div>
+                    </div>
+                    <div class="right">
+                        <div>WAUG Inc | CEO Yoon Sunwoo</div>
+                        <div class="margin-top-5px">Business Registration Numer: 113-86-9493</div>
+                        <div class="margin-top-5px">Mail-order Distributor Registration Number: 2020-서울종로-1199</div>
+                        <div class="margin-top-5px">South Korea Travel Agent License: 2020 - 000029</div>
+                        <div class="margin-top-20px">© 2015-2022 WAUG Inc. All Rights Reserved.</div>
+                    </div>
+                </div>
+            </div> <!--End .footer-pc-->
+
+            <div class="footer-mobile">
+                <div class="up">
+                    <div class="follow-us">Follow Us
+                        <div class="sns-container">
+                            <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145570607.svg"></a>
+                            <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145719190.svg"></a>
+                            <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145832518.svg"></a>
+                            <a href="#"><img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15452145975218.svg"></a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="middle">
+                    <h2>팡팡 고객센터 운영 안내</h2>
+                    <div class="contact-us">
+                        <div class="phone">
+                            <span>상담: </span>
+                            <p>055-634-0060</p>
+                        </div>
+                        <div class="hours">
+                            <span>운영시간: </span>
+                            <p>08:00 AM - 05:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="down">
+                    <div class="company-info">
+                        <div>Geoje, Gyeonsangnamdo, Republic of Korea</div>
+                        <div class="margin-top-5px">Customer Support Center: +82 ) 070-4353-5959 (10:00 AM - 06:00 PM) Exclding weenends & public holidays</div>
+                        <div class="margin-top-5px">help@waug.com</div>
+                        <div class="margin-top-5px"> WAUG Inc. is a sales broker. We are not responsible for any product information and transactions.</div>
+                        
+                        <div>WAUG Inc | CEO Yoon Sunwoo</div>
+                        <div class="margin-top-5px">Business Registration Numer: 113-86-9493</div>
+                        <div class="margin-top-5px">Mail-order Distributor Registration Number: 2020-서울종로-1199</div>
+                        <div class="margin-top-5px">South Korea Travel Agent License: 2020 - 000029</div>
+                        <div class="margin-top-20px">© 2015-2022 WAUG Inc. All Rights Reserved.</div>
+                    
+                    </div>
+                    <div class="agreement-info-buttons">
+                        <div class="button">이용약관</div>
+                        <div class="button">개인정보 처리방법</div>
                     </div>
                 </div>
             </div>
-            <div class="down">
-                <div class="left">
-                    <div>Geoje, Gyeonsangnamdo, Republic of Korea</div>
-                    <div class="margin-top-5px">Customer Support Center: +82 ) 070-4353-5959 (10:00 AM - 06:00 PM) Exclding weenends & public holidays</div>
-                    <div class="margin-top-5px">help@waug.com</div>
-                    <div class="margin-top-5px"> WAUG Inc. is a sales broker. We are not responsible for any product information and transactions.</div>
-                </div>
-                <div class="right">
-                    <div>WAUG Inc | CEO Yoon Sunwoo</div>
-                    <div class="margin-top-5px">Business Registration Numer: 113-86-9493</div>
-                    <div class="margin-top-5px">Mail-order Distributor Registration Number: 2020-서울종로-1199</div>
-                    <div class="margin-top-5px">South Korea Travel Agent License: 2020 - 000029</div>
-                    <div class="margin-top-20px">© 2015-2022 WAUG Inc. All Rights Reserved.</div>
-                </div>
-            </div>
-        </div><!--End .footer-->
+
+        </div> <!--End footer wrapper-->
     </div><!--End .page-content-->
 
     <div class="popup-background"></div>

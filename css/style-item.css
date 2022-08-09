@@ -1370,7 +1370,6 @@ a {
 .footer-mobile .down .button:last-child {
     font-weight: 600;
 }
-
 @media (min-width: 800px) {
     .footer-pc {
         display: block;
@@ -1378,4 +1377,97 @@ a {
     .footer-mobile {
         display: none;
     }
+}
+
+/* MOBILE IMAGE GALLERY */
+.mobile-gallery-modal {
+    position: fixed;
+    background-color: rgba(0,0,0, 0.85);
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: none;
+    flex-direction: column;
+    z-index:100;
+}
+.mobile-gallery-modal .gallery-header {
+    width: 100%;
+    height: 22px;
+}
+.mobile-gallery-modal .gallery-header .gallery-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 22px;
+    height: 22px;
+    z-index: 100;
+    /* padding: 20px; */
+}
+.mobile-gallery-modal .gallery-content {
+    width: 100%;
+    background: #000;
+    font-size: 14px;
+    color: #000;
+    padding: 0;
+    margin: auto;
+}
+.mobile-gallery-modal .gallery-content .swiper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-gallery-modal .gallery-content .swiper .mobile-gallery-next,
+.mobile-gallery-modal .gallery-content .swiper .mobile-gallery-prev{
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 27px 22px;
+    position: absolute;
+    z-index: 100;
+    cursor:pointer;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    padding: 0px 20px;
+
+}
+.mobile-gallery-modal .gallery-content .swiper .mobile-gallery-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    right: 10px;
+    left: auto;
+}
+.mobile-gallery-modal .gallery-content .swiper .mobile-gallery-prev{
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    left: 10px;
+    right: auto;
+}
+
+.mobile-gallery-modal .gallery-content .swiper .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: content-box;
+}
+.mobile-gallery-modal .gallery-content .swiper .swiper-wrapper .swiper-slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    padding-top: 65%;
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mobile-gallery-modal .gallery-content .thumbSwiper .swiper-slide {
+    padding-top: 12% !important;
+    opacity: 0.4;
 }
