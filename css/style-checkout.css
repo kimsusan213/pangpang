@@ -1,5 +1,5 @@
 * {
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     margin:0;
     font-family: "SUIT", sans-serif;
 }
@@ -14,25 +14,33 @@ a {
 }
 :root {
     --main-color:#FF8039;
+    --nav-height: 71px;
 }
+
+
 /* NAVIGATION BAR */
-.nav-bar-white {
+.nav-white-wrapper {
     background-color: #ffffff;
-    z-index:20;
-    position:sticky;
-    top:0;
-    left:0;
-    right:0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    height: 71px;
+    height: var(--nav-height);
     padding: 0 30px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    box-shadow: 0px 2px 12px 0px rgb( 51 51 51 / 10%);
+    box-shadow: 0px 2px 12px 0px rgb(51 51 51 / 10%);
+    z-index: 20;
 }
+.nav-bar-pc {
+    display: none !important;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
-    padding: 12px 0;
+    padding: 10px 0 0;
 }
 .nav-contents-right {
     list-style:none;
@@ -47,19 +55,81 @@ a {
     color: var(--main-color);
 }
 
+/* NAVIGATION BAR MOBILE VERSION */
+.nav-bar-mobile {
+    display:flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 1171px) {
+    .nav-bar-pc {
+        display: flex !important;
+    }
+    .nav-bar-mobile {
+        display: none !important;
+    }
+}
+.nav-bar-mobile .left {
+    cursor:pointer;
+    color: #333333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-bar-mobile .left img {
+    width: 18px;
+    height: 18px;
+}
+.nav-bar-mobile .center-logo {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-bar-mobile .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #333333;
+}
+.nav-bar-mobile .right .nav-bar-item {
+    margin-left: 20px;
+    cursor: pointer;
+}
+.nav-bar-mobile .right img {
+    width: 18px;
+    height: 18px;
+}
 
+
+/* *************** */
+/* PAYMENT CONTENT */
+/* *************** */
+
+/* PC VERSION */
 .payment-container {
     margin: auto;
     text-align: center;
+    position: relative;
+    top: var(--nav-height);
 }
-
-.payment-container > .left {
+.payment-container .pc {
+    display:none;
+    
+}
+@media (min-width: 1171px) {
+    .payment-container .pc {
+        display: block;
+    }
+}
+.payment-container .pc .left {
     vertical-align: top;
     display: inline-block;
     width: 558px;
 }
-
-.left > .reservation-info {
+.reservation-info {
     width: auto;
     margin: auto;
     margin-top: 40px;
@@ -69,80 +139,79 @@ a {
     background-color: #f5f5f5;
     text-align:initial;
 }
-
-.left > .reservation-info > .reservation-title {
+.pc .reservation-info .reservation-title {
     font-size: 24px;
     font-weight: bold;
     border-radius: 8px 8px 0px 0px;
     background-color: #ffffff;
     padding: 40px 40px 30px 40px;
 }
-.left > .reservation-info > .reservation-details {
+.reservation-info .reservation-details {
     padding: 12px 20px;
 }
-.left > .reservation-info > .reservation-details > .reservation-details-container {
+.reservation-info .reservation-details > .reservation-details-container {
     padding: 20px;
     border-radius: 8px;
     background-color: #ffffff;
     margin-bottom: 12px;
 }
-.left .reservation-details .product-type {
+.reservation-details .product-type {
     padding-bottom: 17px;
     border-bottom: 1px solid #e5e5e5;
 }
-.left .reservation-details .product-type img {
+.reservation-details .product-type img {
     width:20px;
     height:20px;
     float:none;
     vertical-align:sub;
 }
-.left .reservation-details .product-type span {
+.reservation-details .product-type span {
     margin-left: 8px;
 }
 
-.left .reservation-details .body {
+.reservation-details .body {
     margin-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px dotted #e5e5e5;
 }
-.left .reservation-details .body > .selected-product-title {
+.reservation-details .body > .selected-product-title {
     font-size: 18px;
     font-weight: bold;
 }
-.left .reservation-details .body > .selected-product-option {
+.reservation-details .body > .selected-product-option {
     margin-top: 8px;
     font-size: 15px;
     font-weight: 500;
     color: #333333;
 }
-.left .reservation-details .body > .selected-date {
+.reservation-details .body > .selected-date {
     margin-top: 8px;
     font-size: 14px;
     font-weight: 500;
 }
-.left .reservation-details .selected-items {
+.reservation-details .selected-items {
     margin-top: 23px;
     margin-bottom: 24px;
     font-size: 14px;
 }
-.left .reservation-details .selected-items > .item {
+.reservation-details .selected-items > .item {
     width: 100%;
     margin-bottom: 16px;
 }
-.left .reservation-details .selected-items > .item > .item-left {
+.reservation-details .selected-items > .item > .item-left {
     color: #999999;
     width: 70%;
     display:inline-block;
     font-size: 14px;
     text-align: initial;
 }
-.left .reservation-details .selected-items > .item > .item-right {
+.reservation-details .selected-items > .item > .item-right {
     color: #333333;
     font-size: 14px;
     float: right;
 }
 
-.left .reservation-details .customer-info-button {
+.reservation-details .customer-info-button {
     cursor:pointer;
     border-radius: 4px;
     border: 1px solid #e5e5e5;
@@ -150,31 +219,31 @@ a {
     padding: 10px;
 }
 
-.left .reservation-total {
+.reservation-total {
     background-color: #ffffff;
     border-radius: 0px 0px 8px 8px;
     padding: 30px 20px 30px 20px;
     font-size: 16px;
     font-weight: 500;
 }
-.left .reservation-total > .left-label {
+.reservation-total > .left-label {
     width: 70%;
     display:inline-block;
 }
-.left .reservation-total > .right-price {
+.reservation-total > .right-price {
     float: right;
     color: var(--main-color);
 }
 
 
-.payment-container > .right {
+.payment-container .pc .right {
     vertical-align: top;
     display: inline-block;
     margin-left: 30px;
     width: 582px;
 }
 
-.right > .payment-method-form {
+.right .payment-method-form {
     text-align:initial;
     width: auto;
     margin: auto;
@@ -183,16 +252,16 @@ a {
     border-radius: 8px;
     border: 1px solid #e5e5e5;
 }
-.right > .payment-method-form:last-child {
+.payment-method-form:last-child {
     margin-bottom:80px;
 }
 
-.right > .payment-method-form > .form-title {
+.payment-method-form .form-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 30px;
 }
-.right > .payment-method-form > .payment-method {
+.payment-method-form .payment-method {
     width: 502px;
     height: 64px;
     border-radius: 5.3px;
@@ -200,41 +269,41 @@ a {
     cursor: pointer;
     margin-top: 10px;
 }
-.right > .payment-method-form > .payment-method > .method-title {
+.payment-method-form .payment-method > .method-title {
     display: flex;
 }
-.right > .payment-method-form > .payment-method > .method-title > .icon {
+.payment-method-form .payment-method > .method-title > .icon {
     width: 26px;
     height: 21px;
     margin: 24px 21px;
 }
-.right > .payment-method-form > .payment-method > .method-title > .name {
+.payment-method-form .payment-method > .method-title > .name {
     height: 100%;
     padding-top: 20px;
     color: #cccccc;
 }
-.right > .payment-method-form > .payment-method.phone .icon {
+.payment-method-form .payment-method.phone .icon {
     width: 23px;
     height: 23px;
     margin: 20px 21px;
 }
-
-.right > .payment-method-form > .payment-method.active {
+.payment-method-form .payment-method.active {
     border: 1px solid #333333;
 }
-.right > .payment-method-form > .payment-method.active > .method-title > .name {
+.payment-method-form .payment-method.active > .method-title > .name {
     color: #333333;
 }
 
 
 
-.right > .payment-method-form .agree-all {
+.payment-method-form .agree-all {
     margin: 0 0 20px;
     padding:20px;
     border-radius: 4px;
     background-color: #fafafa;
 }
-.right .payment-method-form .agree-all > .radiobutton-container {
+
+.payment-method-form .agree-all > .radiobutton-container {
     font-size: 16px;
     font-weight: bold;
     display: flex;
@@ -254,12 +323,11 @@ a {
     font-size: 16px;
     font-weight: bold;
 }
-
-.right > .payment-method-form .agree {
+.payment-method-form .agree {
     margin: 20px 0px 0px 20px;
     display: flex;   
 }
-.right > .payment-method-form .agree > .radiobutton-container {
+.payment-method-form .agree > .radiobutton-container {
     font-size: 16px;
     font-weight: 500;
     width: calc(100% - 62px);
@@ -275,6 +343,9 @@ a {
 .agree > .radiobutton-container > .radiobutton img {
     width: 100%;
     height: 100%;
+}
+.agree > .radiobutton-container > .label {
+    width: inherit;
 }
 .agree > .view-agreement-text {
     margin-top: 0;
@@ -302,17 +373,17 @@ a {
     margin-top: 10px;
     float: right;
 }
-.payment-method-form > .divider {
+.payment-method-form .divider {
     margin: 30px 0px;
     height: 1px;
     background-color: #f5f5f5;
 }
-.payment-method-form > .total-price > .title {
+.payment-method-form .total-price > .title {
     display:inline-block;
     font-size: 20px;
     font-weight: 500;
 }
-.payment-method-form > .total-price > .final-price {
+.payment-method-form .total-price > .final-price {
     display:inline;
     font-size: 20px;
     font-weight: bold;
@@ -332,6 +403,131 @@ a {
     align-items:center;
     cursor:pointer;
 }
+
+/* MOBILE VERSION */
+.payment-container .mobile {
+    display:block;
+}
+@media(min-width: 1171px) {
+    .payment-container .mobile {
+        display:none;
+    }
+}
+.mobile .reservation-info {
+    width: auto;
+    margin: 0;
+}
+.mobile .header {
+    height: auto;
+    width: auto;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    display: block;
+    cursor:pointer;
+}
+.mobile .header .title {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-table;
+}
+.mobile .header .arrow-button {
+    display: inline;
+    float: right;
+}
+.mobile .reservation-info .content {
+    margin-top: 0px;
+    border: 0;
+    border-top: 1px solid #f5f5f5;
+    border-radius: 0px;
+    text-align: initial;
+    width: auto;
+    margin: auto;
+    padding: 0px;
+    background-color: #f5f5f5;
+}
+.mobile .reservation-details-container {
+    font-size: 12px;
+    font-weight: bold;
+}
+.mobile-device-divider {
+    width: auto;
+    height: 10px;
+    background-color: #f5f5f5;
+}
+@media (max-width: 1171px) {
+    .reservation-details .product-type {
+        padding-bottom:15px;
+    }
+    .reservation-details .body {
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    .reservation-details .selected-items {
+        margin-top: 19px;
+        margin-bottom: 20px;
+    }
+    .reservation-details .customer-info-button {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+.mobile .payment-method-form {
+    width: auto;
+    text-align:initial;
+}
+.mobile .payment-method-form .header {
+    height: auto;
+    width: auto;
+    padding: 12px 20px;
+    display: block;
+    cursor: pointer;
+}
+.mobile .payment-method-form .content {
+    text-align: initial;
+    width: auto;
+    margin: auto;
+    margin-top: 0px;
+    border: 0px;
+    border-top: 1px solid #f5f5f5;
+    border-radius: 0px;
+    padding: 20px;
+}
+@media (max-width: 1171px) {
+    .payment-method-form .payment-method {
+        width: 100%;
+        height: 48px;
+    }
+    .payment-method-form .payment-method .method-title .icon {
+        width: 16px;
+        height: 12px;
+        margin: 18px 16px;
+    }
+    .payment-method-form .payment-method .method-title .name {
+        padding-top: 12px;
+    }
+
+    .payment-method-form .agree-all {
+        margin: 0 0 15px;
+        padding: 12px 20px;
+        /* height: 24px; */
+    }
+    .payment-method-form .radiobutton-container .radiobutton {
+        width: 20px;
+        height: 20px;
+    }
+    .agree-all .radiobutton-container .label,
+    .agree .radiobutton-container .label {
+        font-size: 14px;
+    }
+    .payment-method-form .agree {
+        margin: 15px 20px 0 20px;
+    }
+    .payment-method-form:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+
 
 /**************************************/
 /* MODAL BOXES */

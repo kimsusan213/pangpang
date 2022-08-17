@@ -11,55 +11,95 @@
     <link href="css/style-customer-info.css" rel="stylesheet">
 </head>
 <body>
-    <div class="nav-bar-white">
-        <a href="index.html">
-            <div class="logo">
-                <img src="img/pangpang_white.png">
+
+    <div class="nav-white-wrapper">
+        <div class="nav-bar-pc">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/pangpang_white.png">
+                    <!-- <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/16366122050748.svg"> -->
+    
+                </div>
+            </a>
+            <ul class="nav-contents-right">
+                <li>한국어</li>
+                <li>고객센터</li>
+            </ul>
+        </div>
+        <div class="nav-bar-mobile">
+            <div class="left">
+                <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15444220173835.svg">
             </div>
-        </a>
-        <ul class="nav-contents-right">
-            <li>한국어</li>
-            <li>고객센터</li>
-        </ul>
+            <div class="center">
+                <a href="index.html">
+                    <div class="center-logo"><img src="img/pangpang_white.png"></div>
+                </a>
+            </div>
+            <div class="right">
+                <div class="nav-bar-item">
+                    <img src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578840652736.svg">
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="mobile-device-before"></div>
-    <div class="customer-information">
-        <div class="form-title">예약자 정보</div>
-        <div class="form-subtitle">예약자 성함과 연락처는 실제 상품을 구ㅐ하는 분의 정보를 기입해 주시기 바랍니다.</div>
-        <div class="info-detail">
-            <div class="detail-title">이름</div>
-            <div class="form-text">
-                <input class="short-text-input" placeholder="성">
-                <input class="short-text-input" placeholder="이름">
+    <div class="page-content">
+        <div class="mobile-device-before"></div>
+        <div class="customer-information">
+            <div class="form-title">예약자 정보</div>
+            <div class="form-subtitle">예약자 성함과 연락처는 실제 상품을 구ㅐ하는 분의 정보를 기입해 주시기 바랍니다.</div>
+            <div class="info-detail">
+                <div class="detail-title">이름</div>
+                <div class="form-text name">
+                    <input class="text-input" placeholder="성">
+                    <input class="text-input" placeholder="이름">
+                </div>
+            </div>
+            <div class="info-detail">
+                <div class="detail-title">휴대전화번호</div>
+                <div class="phone-number">
+                    <select class="select">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                    </select>
+                    <input class="text-input" max-length="4">
+                    <input class="text-input" max-length="4">
+                    <div class="send-code-button deactivated">인증번호 받기</div>
+                </div>
+                <div class="verification-code">
+                    <div class="input-code">
+                        <input class="text-input" placeholder="발송된 인증코드를 입력해주세요">
+                        <div class="timer">
+                            <div class="time-remaining">
+                                3:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resend-button">재전송</div>
+                    <div class="verification-button deactivated">인증하기</div>
+                </div>
+                
+            </div>
+            <div class="info-detail">
+                <div class="detail-title">이메일</div>
+                <div class="form-text email">
+                    <input class="text-input" placeholder="email">
+                </div>
             </div>
         </div>
-        <div class="info-detail">
-            <div class="detail-title">휴대전화번호</div>
-            <div class="phone-number">
-                <select class="select">
-                    <option value="010">010</option>
-                    <option value="011">011</option>
-                    <option value="016">016</option>
-                    <option value="017">017</option>
-                    <option value="018">018</option>
-                    <option value="019">019</option>
-                </select>
-                <input class="text-input" max-length="4">
-                <input class="text-input" max-length="4">
-            </div>
-        </div>
-        <div class="info-detail">
-            <div class="detail-title">이메일</div>
-            <div class="form-text">
-                <input class="text-input" placeholder="email">
-            </div>
-        </div>
-    </div>
-    <div class="mobile-device-after"></div>
+        <div class="mobile-device-after"></div>
 
-    <div class="footer-order">
-        <a href="checkout.html"><div class="button-order">다음</div></a>
+        <div class="footer-order">
+            <a href="checkout.html">
+                <div class="button-order">다음</div>
+            </a>
+        </div>
     </div>
+
+    <script src="js/script-customer-info.js"></script>
 </body>
 </html>

@@ -49,7 +49,7 @@ payment_method.forEach(method =>
 
 
 var agree_all = document.querySelector('.agree-all');
-var agree = document.querySelectorAll('.agree');
+var agree = document.querySelectorAll('.agree .radiobutton-container');
 agree_all.addEventListener("click", ()=>{
     let radiobuttons = document.querySelectorAll('.radiobutton img');
     if( radiobuttons[0].src.includes("unchecked") ) {
