@@ -117,7 +117,6 @@ a {
     font-size: 20px;
     font-weight: 600;
 }
-
 .page-content .contents .select-options {
     border-top: 1px solid #e5e5e5;
     background-color: #fafafa;
@@ -137,21 +136,27 @@ a {
     .page-content .contents .calendar {
         padding-top: 20px;
         width: 746px;
-        position: relative;
-        box-sizing: content-box;
     }
     .page-content .contents .select-options {
         padding: 40px 30px 20px;
         width: 593px;
     }
 }
+
+
+/* CALENDAR */
 .page-content .contents .calendar .calendar-wrapper {
     display: flex;
     justify-content:center;
 }
-
-
-/* CALENDAR */
+.calendar .calendar-wrapper .set-width {
+    width: 746px;
+}
+@media (max-width: 800px) {
+    .calendar .calendar-wrapper .set-width {
+        width: 389px;
+    }
+}
 .calendar .week-header {
     margin-left: 9px;
     position:relative;
@@ -163,18 +168,23 @@ a {
     position: absolute;
     left: 0;
     top: 70px;
+    text-align: left;
+}
+@media(max-width: 800px) {
+    .calendar .week-header .week-header-wrapper {
+        top: 45px !important;
+    }
 }
 .calendar .week-header ul {
     list-style: none;
-    margin: 1px 0;
-    padding-left:0;
-    padding-right: 0;
-    font-size: 12px;
-    display:flex;
+    display: flex;
+    padding: 0;
+    font-size: 14px;
+    color: #757575;
+    text-align: left;
 }
-.calendar .week-header ul > li {
-    display: inline-block;
-    text-align:center;
+.calendar .week-header ul li {
+    text-align: center;
     width: 100px;
 }
 .calendar .week-header ul > li:first-child {
@@ -209,9 +219,9 @@ a {
     position:relative;
     overflow:hidden;
 }
+
 .calendar .day-picker > .month-grid > .month-grid-wrapper {
     width: 1492px;
-    /* width: 746px; */
     position:absolute;
     left: 9px;
     background:#fff;
@@ -266,6 +276,31 @@ a {
     padding:0;
     font-size: 14px;
     text-align: center;
+}
+@media (max-width: 800px) {
+    .page-content .contents .calendar {
+        width: 389px;
+        margin-right:auto;
+        margin-left: auto;
+    }
+    .calendar .day-picker .month-grid {
+        width: 388px;
+        height: 367px;
+    }
+    .calendar .day-picker > .month-grid > .month-grid-wrapper {
+        width: 778px;
+    }
+    .month-table td {
+        width: 49px;
+        height: 48px;
+    }
+    .calendar .week-header ul > li {
+        width: 49px;
+    }
+    .calendar .month-grid .month .month-caption {
+        padding-bottom: 13%;
+        color: #484848;
+    }
 }
 .month-table .day {
     width:100%;

@@ -3,9 +3,10 @@
 <head>
     <title>Book Item</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
     <link rel="stylesheet" href="css/style-calendar.css">
     <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
 </head>
@@ -48,42 +49,44 @@
             <!-- CALENDAR -->
             <div class="calendar">
                 <div class="calendar-wrapper">
-                    <div class="week-header">
-                        <div class="week-header-wrapper">
-                            <ul>
-                                <li>일</li>
-                                <li>월</li>
-                                <li>화</li>
-                                <li>수</li>
-                                <li>목</li>
-                                <li>금</li>
-                                <li>토</li>
-                            </ul>
+                    <div class="set-width">
+                        <div class="week-header">
+                            <div class="week-header-wrapper">
+                                <ul>
+                                    <li>일</li>
+                                    <li>월</li>
+                                    <li>화</li>
+                                    <li>수</li>
+                                    <li>목</li>
+                                    <li>금</li>
+                                    <li>토</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="day-picker">
-                        <div class="navigation-button">
-                            <img class="button-prev disabled" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578832321432.svg">
-                            <img class="button-next" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578832425605.svg">
-                        </div>
-                        <div class="month-grid">
-                            <div class="month-grid-wrapper">
-                                <div class="month current">
-                                    <div class="month-wrapper">
-                                        <div class="month-caption" id="year-month">----년 --월</div>
-                                        <table class="month-table">
-                                            <tbody class="days">
-                                            </tbody>
-                                        </table>
+                        <div class="day-picker">
+                            <div class="navigation-button">
+                                <img class="button-prev disabled" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578832321432.svg">
+                                <img class="button-next" src="https://d2mgzmtdeipcjp.cloudfront.net/files/upload/15578832425605.svg">
+                            </div>
+                            <div class="month-grid">
+                                <div class="month-grid-wrapper">
+                                    <div class="month current">
+                                        <div class="month-wrapper">
+                                            <div class="month-caption" id="year-month">----년 --월</div>
+                                            <table class="month-table">
+                                                <tbody class="days">
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="month next">
-                                    <div class="month-wrapper">
-                                        <div class="month-caption" id="year-month">----년 --월</div>
-                                        <table class="month-table">
-                                            <tbody class="days">
-                                            </tbody>
-                                        </table>
+                                    <div class="month next">
+                                        <div class="month-wrapper">
+                                            <div class="month-caption" id="year-month">----년 --월</div>
+                                            <table class="month-table">
+                                                <tbody class="days">
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

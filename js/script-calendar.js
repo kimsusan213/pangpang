@@ -120,7 +120,6 @@ loadNextMonth();
 
 var dayCells = document.querySelectorAll('.day');
 dayCells.forEach(day => {
-    console.log(day);
     day.addEventListener('click', ()=>{
         if(document.querySelector('.days .selected') == null) {
             day.classList.add('selected');
@@ -140,10 +139,13 @@ var currentMonth = document.querySelector('.month.current');
 var nextMonth = document.querySelector('.month.next');
 var nextBtn = document.querySelector('.day-picker .button-next');
 var prevBtn = document.querySelector('.day-picker .button-prev');
+var calendarWidth = document.querySelector('.month-grid').clientWidth;
+// var calendarWidth = parseInt(window.getComputedStyle(document.querySelector('.calendar')).clientWidth);
+console.log(calendarWidth);
 
 nextBtn.addEventListener('click', ()=> {
     dt.setMonth(today.getMonth()+1);
-    calendarWrapper.style.left = -746 + 'px';
+    calendarWrapper.style.left = -(calendarWidth - 9) + 'px';
     nextMonth.style.visibility = 'visible';
     currentMonth.style.visibility = 'hidden';
     prevBtn.classList.remove('disabled');
